@@ -42,7 +42,7 @@ function Landing() {
     }
     // call to weather API to get weather
     const key = "2ca2e5cd765449fa99d60857221903";
-    const call = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${Zipcode}`;
+    const call = `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${Zipcode}`;
 
     return axios
       .get(call)
@@ -75,7 +75,7 @@ function Landing() {
     console.log(city, state, country);
 
     // call to geonames to get zip code based on city state and country
-    const call = `http://api.geonames.org/findNearbyPostalCodesJSON?country=${country}&placename=${city},${state}&username=${username}&maxRows=1`;
+    const call = `https://api.geonames.org/findNearbyPostalCodesJSON?country=${country}&placename=${city},${state}&username=${username}&maxRows=1`;
     return axios
       .get(call)
       .then(function (res: any) {
