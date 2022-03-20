@@ -75,7 +75,7 @@ function Landing() {
     console.log(city, state, country);
 
     // call to geonames to get zip code based on city state and country
-    const call = `https://api.geonames.org/findNearbyPostalCodesJSON?country=${country}&placename=${city},${state}&username=${username}&maxRows=1`;
+    const call = `https://secure.geonames.org/findNearbyPostalCodesJSON?country=${country}&placename=${city},${state}&username=${username}&maxRows=1`;
     return axios
       .get(call)
       .then(function (res: any) {
